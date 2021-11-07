@@ -2,7 +2,7 @@
 
 #
 # CloudFlare cPanel Install Script
-#
+# JUPITER
 
 INSTALLER="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
 
@@ -167,31 +167,31 @@ if [ "$VERBOSE" = true ]; then
 fi
 
 # Create the cloudflare theme directory if it does not exist, then install files
-install -d $INSTALL_DIR/base/frontend/paper_lantern/cloudflare
+install -d $INSTALL_DIR/base/frontend/jupiter/cloudflare
 
-install $SOURCE_DIR/proxy.live.php $INSTALL_DIR/base/frontend/paper_lantern/cloudflare
-install $SOURCE_DIR/index.live.php $INSTALL_DIR/base/frontend/paper_lantern/cloudflare
-install $SOURCE_DIR/compiled.js $INSTALL_DIR/base/frontend/paper_lantern/cloudflare
-install $SOURCE_DIR/config.json.sample $INSTALL_DIR/base/frontend/paper_lantern/cloudflare
+install $SOURCE_DIR/proxy.live.php $INSTALL_DIR/base/frontend/jupiter/cloudflare
+install $SOURCE_DIR/index.live.php $INSTALL_DIR/base/frontend/jupiter/cloudflare
+install $SOURCE_DIR/compiled.js $INSTALL_DIR/base/frontend/jupiter/cloudflare
+install $SOURCE_DIR/config.json.sample $INSTALL_DIR/base/frontend/jupiter/cloudflare
 
 # composer.json is used by cloudflare.update.sh to determine the current version number
-install $SOURCE_DIR/composer.json $INSTALL_DIR/base/frontend/paper_lantern/cloudflare
+install $SOURCE_DIR/composer.json $INSTALL_DIR/base/frontend/jupiter/cloudflare
 
 # Install internationalization directory
-install -d $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/lang
-install $SOURCE_DIR/lang/* $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/lang
+install -d $INSTALL_DIR/base/frontend/jupiter/cloudflare/lang
+install $SOURCE_DIR/lang/* $INSTALL_DIR/base/frontend/jupiter/cloudflare/lang
 
 # Install assets directory
-install -d $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/assets
-install $SOURCE_DIR/assets/* $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/assets
+install -d $INSTALL_DIR/base/frontend/jupiter/cloudflare/assets
+install $SOURCE_DIR/assets/* $INSTALL_DIR/base/frontend/jupiter/cloudflare/assets
 
 # Install fonts directory
-install -d $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/fonts
-install $SOURCE_DIR/fonts/* $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/fonts
+install -d $INSTALL_DIR/base/frontend/jupiter/cloudflare/fonts
+install $SOURCE_DIR/fonts/* $INSTALL_DIR/base/frontend/jupiter/cloudflare/fonts
 
 # Install stylesheets directory
-install -d $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/stylesheets
-install $SOURCE_DIR/stylesheets/* $INSTALL_DIR/base/frontend/paper_lantern/cloudflare/stylesheets
+install -d $INSTALL_DIR/base/frontend/jupiter/cloudflare/stylesheets
+install $SOURCE_DIR/stylesheets/* $INSTALL_DIR/base/frontend/jupiter/cloudflare/stylesheets
 
 # Install the CloudFlare.pm file
 install -d $INSTALL_DIR/Cpanel/API
